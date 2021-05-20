@@ -68,16 +68,16 @@ export const TodoList: React.FC<TLProps> = ({ todoItem, setTodoItem }) => {
       >
         <div className="flex gap-x-4 items-center">
           <input
-            className="h-4 w-4"
+            className="w-4 h-4"
             type="checkbox"
             defaultChecked={todo.isCompleted}
             // onChange={() => setTodoItem(updateTodos(todoItem))}
           />
-          {todo.name}
+          <div className="w-44">{todo.name}</div>
         </div>
         <div>
           <button
-            className="text-xs text-red-500 font-semibold"
+            className="text-xs w-10 text-red-500 font-semibold"
             type="submit"
             onClick={() => deleteTodo(todo.id)}
           >
